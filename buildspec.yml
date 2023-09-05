@@ -1,0 +1,7 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - aws s3 cp . s3://your-bucket-name --recursive --exclude ".git/*"
+artifacts:
+  files: '**/*'
